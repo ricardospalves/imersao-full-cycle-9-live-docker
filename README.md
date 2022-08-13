@@ -89,11 +89,11 @@ _Containers_ que são baseados nele. Então é preciso deletar primeiro os
 _Containers_ baseados nessa _Image_ e só depois é possível deletar o _Image_.
 
 ```sh
-npm rmi <IMAGE_NAME>
+docker rmi <IMAGE_NAME>
 ```
 
 Alternativamente, é possível forçar que um _Image_ seja deletado:
 
 ```sh
-npm rmi <IMAGE_NAME> -f
+docker rmi <IMAGE_NAME> -f
 ```
