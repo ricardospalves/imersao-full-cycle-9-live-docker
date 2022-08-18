@@ -60,6 +60,12 @@ Listar todos os _Containers_:
 docker ps -a
 ```
 
+Rodar o _Docker_:
+
+```sh
+docker run <IMAGE_NAME>
+```
+
 Parar um _Container_ específico:
 
 ```sh
