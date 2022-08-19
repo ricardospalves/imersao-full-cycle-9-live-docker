@@ -19,6 +19,21 @@ Pontos importantes sobre o comando acima:
 - O `my-docker-image` é apenas exemplo, a imagem pode ter qualquer nome
 - O `.` (ponto) é o caminho para o _Dockerfile_
 
+O comando acima serve para criar uma imagem baseada em um _Dockerfile_ padrão,
+mas podemos especificar o _Dockerfile_ que queremos usar, como um exclusivo para
+produção por exemplo. Para isso, nós podemos usar o seguinte comando:
+
+```sh
+docker build -t my-production-docker-image -f Dockerfile.prod .
+```
+
+Pontos importantes sobre o comando acima:
+
+- O `-t my-production-docker-image` serve para dar um nome para a imagem
+- O `my-production-docker-image` é apenas exemplo, a imagem pode ter qualquer nome
+- O `-f Dockerfile.prod` serve para especificar o arquivo que será usado para criar a imagem
+- O `.` (ponto) é o caminho para o _Dockerfile_
+
 Para rodar a imagem que criamos, basta usar o comando padrão:
 
 ```sh

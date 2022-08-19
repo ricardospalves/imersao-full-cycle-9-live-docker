@@ -1,0 +1,21 @@
+# Define a imagem que queremos usar no projeto
+FROM node:16.16.0-slim
+
+# Define o diretório que queremos trabalhar dentro do Container
+WORKDIR /home/node/app
+
+# Copia os arquivos para o diretório definido no WORKDIR
+COPY package*.json ./
+
+# Roda o comando dos arquivos copiados, nesse caso, o comando do npm para
+# instalar
+RUN npm install
+
+# Copia o restante dos arquivos
+COPY . .
+
+# Mantem o Container executando indefinidamente
+# CMD [ "tail", "-f", "/dev/null" ]
+
+# Roda o servidor Node
+CMD [ "node", "/home/node/app/index.js" ]
